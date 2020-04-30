@@ -43,7 +43,7 @@
             </p>
              <p class="d-flex justify-content-between">
                 <label>Mot de passe : </label>
-                <input type="text" name="mdp">
+                <input type="password" name="mdp">
             </p>
             </div>
                 <input type="submit" value="Valider" name="valider" class="ml-5">

@@ -45,6 +45,7 @@ public class ServletContact extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
+		String message;
 		HttpSession session = request.getSession();
 		String contextpath = this.getServletContext().getContextPath();
 		int id = (int) session.getAttribute("id");
@@ -56,7 +57,15 @@ public class ServletContact extends HttpServlet {
 		Utilisateur u1 = new Utilisateur(nom,prenom,pseudo,email,mdp);
 		Relation r1 = new Relation(id,0);
 		String ps = request.getParameter("ps");
-		if(request.getParameter("valider").equals("valider"))
+		if(ps.isEmpty())
+		{
+			message = "Veuillez entrer un pseudo";
+			request.setAttribute("error", message);
+			response.sendRedirect(contextpath+"/ServletContact");
+		}
+		else
+		{
+			if(request.getParameter("valider").equals("valider"))
 		{
 			
 			r1.addRelation(ps);
@@ -68,6 +77,8 @@ public class ServletContact extends HttpServlet {
 		
 		response.sendRedirect(contextpath+"/ServletAccueil");
 		}
+		}
+		
 	}
 
 }

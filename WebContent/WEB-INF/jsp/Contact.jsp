@@ -54,6 +54,9 @@ ArrayList<Relation> relation = user1.possedeRelation();
             <div class="ml-5">
                 <h2>Ajouter</h2>
                 <form action="" method="post">
+              <%if(request.getAttribute("error")!=null){ %>
+              <p class="text-danger">  <% out.print(request.getAttribute("error")); }%> </p>
+                
                     <label class="mr-1">Pseudo : </label>
                     <input type="text" name="ps"><br>
                     <input type="submit" value="valider" name="valider">
@@ -74,7 +77,7 @@ ArrayList<Relation> relation = user1.possedeRelation();
             <div class="amis d-flex justify-content-around ">
            	<p><%
            	out.print(uti.get(i));
-           	%></p><a href="contact.html">Supprimer</a>
+           	%></p>
 			</div>
             <%} %>
             
