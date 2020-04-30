@@ -1,0 +1,70 @@
+.logo {
+    background-image: url(../img/logo.png);
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 100px;
+    background-size: 100px;
+}
+
+.espace {
+    height: 110px
+}
+
+.annonce {
+    border: solid black;
+    width: 80%;
+    margin-bottom: 50px;
+}
+
+.qui {
+    font-size: 200%
+}
+
+.texte {
+    font-size: 120%
+}
+
+.commeT {}
+
+.commNom {}
+
+.comm {
+    border: solid black;
+    border-width: thin;
+}
+
+.creerComm {
+    height: 100px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.amis{
+    border: solid black;
+    width: 40%;
+   margin-top: 20px;
+    margin-left: 20px;
+}
+
+.amis p span{
+    font-size: 120%;
+    margin: 20px;
+}
+
+.Samis{
+    margin-top: 20px;
+    width: 60%;
+}
+
+.ajout{
+    width: 40%
+}
+
+.connect{
+    width: 30%;
+}
+
+.creer{
+    width: 50%;
+    margin-left: 40px;
+}
